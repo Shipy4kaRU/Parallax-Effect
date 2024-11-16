@@ -1,0 +1,489 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;800&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Pipins", "Arial", sans-serif;
+}
+
+.header {
+  position: absolute;
+  z-index: 9999;
+  padding: 0.9rem 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.nav {
+  max-width: 1400px;
+  z-index: 100;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.nav__el a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0 1.5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-style: 0.83rem;
+}
+
+.logo {
+  width: 100px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+}
+
+.search-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.nav__humb {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 1rem;
+  border-radius: 50%;
+  background-color: rgba(115, 115, 115, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+.nav__humb::after {
+  content: " ";
+  position: absolute;
+  width: 70%;
+  height: 2px;
+  border-radius: 35%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 0 -3.5px #fff, 0 3.5px #fff;
+}
+
+.main {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.parallax {
+  pointer-events: none;
+  transition: 0.45s cubic-bezier(0.2, 0.49, 0.32, 0.99);
+  will-change: transform;
+}
+
+.bg-img {
+  position: absolute;
+  width: 194.44%; /* (2800 / 1440) * 100% */
+  top: 2%;
+  left: 50%;
+  z-index: 1;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.fog-7 {
+  position: absolute;
+  z-index: 2;
+  width: 131.94%; /* (1900 / 1440) * 100% */
+  top: calc(50% - 12.35%); /* (-100 / 810) * 100% */
+  left: calc(50% + 20.83%); /* (300 / 1440) * 100% */
+  pointer-events: none;
+}
+
+.mountain-10 {
+  position: absolute;
+  z-index: 3;
+  width: 61.94%; /* (892 / 1440) * 100% */
+  top: 50%; /* (69 / 810) * 100% */
+  left: 50%; /* (230 / 1440) * 100% */
+  pointer-events: none;
+}
+
+.fog-6 {
+  position: absolute;
+  z-index: 4;
+  width: 111.81%; /* (1610 / 1440) * 100% */
+  top: calc(50% + 10.49%); /* (85 / 810) * 100% */
+  left: calc(50% + 0.69%); /* (10 / 1440) * 100% */
+  pointer-events: none;
+}
+
+.mountain-9 {
+  position: absolute;
+  z-index: 5;
+  width: 61.94%; /* (892 / 1440) * 100% */
+  top: calc(7%); /* (113 / 810) * 100% */
+  left: calc(-6%); /* (-457 / 1440) * 100% */
+  pointer-events: none;
+}
+
+.mountain-8 {
+  position: absolute;
+  z-index: 6;
+  width: 56.25%; /* (810 / 1440) * 100% */
+  top: 40%; /* (86 / 810) * 100% */
+  left: 5%; /* (-202 / 1440) * 100% */
+  pointer-events: none;
+}
+
+.fog-5 {
+  position: absolute;
+  z-index: 7;
+  width: 31.25%; /* (450 / 1440) * 100% */
+  top: calc(50% + 19.75%); /* (160 / 810) * 100% */
+  left: calc(50% + 1.39%); /* (20 / 1440) * 100% */
+  pointer-events: none;
+}
+
+.mountain-7 {
+  position: absolute;
+  z-index: 8;
+  width: 56.36%; /* (538 / 1440) * 100% */
+  top: 50%; /* (123 / 810) * 100% */
+  left: 53%; /* (305 / 1440) * 100% */
+  pointer-events: none;
+}
+
+.text {
+  position: absolute;
+  z-index: 9;
+  top: calc(50% - 130px);
+  left: 50%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  pointer-events: none;
+}
+
+.text h2 {
+  pointer-events: none;
+  font-weight: 100;
+  font-size: 6.5rem;
+  line-height: 0.88;
+  z-index: 1000;
+}
+
+.text h1 {
+  pointer-events: none;
+  font-weight: 800;
+  font-size: 8rem;
+  line-height: 0.88;
+}
+
+.mountain-6 {
+  position: absolute;
+  z-index: 10;
+  top: calc(50% + 7.41%); /* (60 / 810) * 100% */
+  left: calc(50% + 40.97%); /* (590 / 1440) * 100% */
+  width: 28.33%; /* (408 / 1440) * 100% */
+  pointer-events: none;
+}
+
+.fog-4 {
+  position: absolute;
+  z-index: 11;
+  top: calc(50% + 35.53%); /* (223 / 810) * 100% */
+  left: calc(50% - 7.41%); /* (-60 / 1440) * 100% */
+  width: 50.32%; /* (590 / 1440) * 100% */
+  pointer-events: none;
+}
+
+.mountain-5 {
+  position: absolute;
+  z-index: 12;
+  top: calc(50% + 35.86%); /* (250 / 810) * 100% */
+  left: calc(68%); /* (130 / 810) * 100% */
+  width: 43.4%; /* (625 / 1440) * 100% */
+  pointer-events: none;
+}
+
+.fog-3 {
+  position: absolute;
+  z-index: 13;
+  top: calc(50% + 13.58%); /* (110 / 810) * 100% */
+  left: calc(50% - 1.85%); /* (-15 / 1440) * 100% */
+  width: 111.11%; /* (1600 / 1440) * 100% */
+  pointer-events: none;
+}
+
+.mountain-4 {
+  position: absolute;
+  z-index: 14;
+  top: calc(50% + 35.35%); /* (196 / 810) * 100% */
+  left: calc(50% - 30%); /* (-381.5 / 1440) * 100% */
+  width: 54.17%; /* (780 / 1440) * 100% */
+  pointer-events: none;
+}
+
+.mountain-3 {
+  position: absolute;
+  z-index: 15;
+  top: calc(100%); /* (196 / 810) * 100% */
+  left: calc(95%); /* (-381.5 / 1440) * 100% */
+  width: 54.17%; /* (780 / 1440) * 100% */
+  pointer-events: none;
+}
+
+.fog-2 {
+  position: absolute;
+  z-index: 16;
+  top: calc(50% + 18.14%); /* (147 / 810) * 100% */
+  left: calc(50% - 2.31%); /* (-30 / 1440) * 100% */
+  width: 47.92%; /* (690 / 1440) * 100% */
+  pointer-events: none;
+}
+
+.mountain-2 {
+  position: absolute;
+  z-index: 17;
+  width: 40%;
+  top: calc(50% + 19.01%); /* (154 / 810) * 100% */
+  left: calc(50% + 28.89%); /* (412 / 1440) * 100 */
+  pointer-events: none;
+}
+
+.mountain-1 {
+  position: absolute;
+  z-index: 18;
+  width: 36.81%; /* (530 / 1440) * 100% */
+  top: calc(50% + 2.1%); /* (17 / 810) * 100% */
+  left: calc(50% - 41.74%); /* (-601 / 1440) * 100% */
+  pointer-events: none;
+}
+
+.sun-rays {
+  position: absolute;
+  z-index: 19;
+  top: 0;
+  right: 0;
+  width: 41.32%; /* (595 / 1440) * 100% */
+  pointer-events: none;
+}
+
+.black-shadow {
+  position: absolute;
+  z-index: 20;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.fog-1 {
+  position: absolute;
+  z-index: 21;
+  top: calc(100% + 355px); /* (147 / 810) * 100% */
+  left: calc(50% - 2.31%); /* (-30 / 1440) * 100% */
+  width: 1600px; /* (690 / 1440) * 100% */
+  pointer-events: none;
+}
+
+.vignette {
+  position: absolute;
+  pointer-events: none;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgb(0, 0, 0, 0) 65%,
+    rgba(0, 0, 0, 0.7)
+  );
+}
+
+@media (max-width: 1100px) {
+  .text h1 {
+    font-size: 5.8rem;
+  }
+
+  .text h2 {
+    font-size: 4.7rem;
+  }
+}
+
+@media (max-width: 725px) {
+  .text h1 {
+    font-size: 5rem;
+    line-height: 1.1;
+  }
+
+  .text h2 {
+    font-size: 4.1rem;
+    line-height: 1.1;
+  }
+
+  .logo {
+    width: 75px;
+  }
+
+  header ul a {
+    font-size: 0.73rem;
+    padding: 0 0.9rem;
+  }
+
+  .search a {
+    font-size: 0.85rem;
+    padding: 0 1.8rem;
+  }
+  .hamburger {
+    padding-left: 0.9rem;
+  }
+
+  .hamburger a {
+    height: 30px;
+    width: 30px;
+  }
+
+  .bg-img {
+    width: initial;
+    height: 311.104%;
+  }
+
+  .fog-7 {
+    width: initial;
+    height: 211.104%;
+  }
+
+  .mountain-10 {
+    width: initial;
+    height: 99.104%;
+  }
+
+  .fog-6 {
+    width: initial;
+    height: 178.896%;
+  }
+
+  .mountain-9 {
+    width: initial;
+    height: 99.104%;
+  }
+
+  .mountain-8 {
+    width: initial;
+    height: 90%;
+  }
+
+  .fog-5 {
+    width: initial;
+    height: 50%;
+  }
+
+  .mountain-7 {
+    width: initial;
+    height: 59.776%;
+  }
+
+  .mountain-6 {
+    width: initial;
+    height: 45.328%;
+  }
+
+  .fog-4 {
+    width: initial;
+    height: 66.128%;
+  }
+
+  .mountain-5 {
+    width: initial;
+    height: 69.44%;
+  }
+
+  .fog-3 {
+    width: initial;
+    height: 177.776%;
+  }
+
+  .mountain-4 {
+    width: initial;
+    height: 86.672%;
+  }
+
+  .fog-2 {
+    width: initial;
+    height: 173.32%;
+  }
+  .mountain-2 {
+    display: none;
+  }
+  .mountain-1 {
+    width: initial;
+    height: 59.44%;
+  }
+  .fog-1 {
+    width: initial;
+    height: 178.88%;
+  }
+}
+
+@media (max-width: 520px) {
+  .text h1 {
+    font-size: 3.3rem;
+  }
+
+  .text h2 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .text h1 {
+    font-size: 2rem;
+  }
+
+  .text h2 {
+    font-size: 3rem;
+  }
+
+  header ul a {
+    padding: 0.2rem;
+    font-size: 0.5rem;
+  }
+
+  .logo {
+    width: 50px;
+  }
+
+  header {
+    padding: 0.2rem 0;
+  }
+
+  .hamburger {
+    padding: 0.2rem;
+  }
+
+  .search a {
+    padding: 0;
+    /* border: 5px solid black ; */
+  }
+}
